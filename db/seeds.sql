@@ -20,7 +20,7 @@ insert into department(id, name) values
 insert into role(salary, title, department_id)
 (400.00, 'President','1'),
 (200.00, 'RnD','2'),
-(300.00, 'VP_Sales','3'),
-(100.00, 'HR_Rep','4'),
+(300.00, 'VPofSales','3'),
+(100.00, 'HRofRep','4'),
 (50.00, 'Customer_Service_Rep','5'),
 (200.00, 'Accountant','6')
