@@ -22,5 +22,5 @@ insert into role(salary, title, department_id)
 (200.00, 'RnD','2'),
 (300.00, 'VPofSales','3'),
 (100.00, 'HRofRep','4'),
-(50.00, 'Customer_Service_Rep','5'),
+(50.00, 'CustomerofService_Rep','5'),
 (200.00, 'Accountant','6')
