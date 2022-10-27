@@ -1,4 +1,4 @@
-# ReadMEs
+https://marcoferreira07.github.io/Employee-Manager/
 # [repoName](#repoName)
 Employee Manager
 ## Table of Contents  
@@ -25,6 +25,6 @@ N/A
 # Questions
 #### for more information please contact me on github or email
 ## Github
-    https://github.com/MarcoFerreira07/
+   https://marcoferreira07.github.io/Employee-Manager/
 ## Email
     marcoasf.com@gmail.com
