@@ -2,9 +2,9 @@ const mysql = require('mysql2/promise');
 let inquirer = require("inquirer");
 
 
-let connection
+let connection;
 
-start();
+// start();
 initialize();
 main();
 
@@ -12,7 +12,7 @@ main();
 async function initialize() {
   connection = await mysql.createConnection({
     host: 'localhost',
-    user: '',
+    user: 'root',
     password: '',
     database: 'employeetracker_db'
   })
@@ -43,18 +43,17 @@ function start() {
 //                                              \$$$$$$  |                               
 //                                               \______/                                `)
 }
-
 async function main() {
   
-  const menuQuestion = [{
+  try {
+    const menuQuestion =  {
     type: 'list',
     message: 'What would you like to do?',
     name: 'menuOptions',
     choices: ['view all departments', 'view all roles', 'view all employees', 'add a department', 'add a role', 'add an employee', 'update employee role', "I'm finished"]
-  }]
-  const menuAnswer = await inquirer.prompt(menuQuestion)
-
-  switch (menuAnswer.menuOptions) {
+  }
+   let answers = await inquirer.prompt(menuQuestion)
+    switch (answers.menuOptions) {
     case 'view all departments':
       viewDepartments()
       break;
@@ -80,6 +79,12 @@ async function main() {
       process.exit()
       break;
   }
+console.log(answers)
+  } catch (error) {
+    console.log(error)
+  }
+  
+ 
 }
 
 
@@ -247,16 +252,17 @@ async function updateRole(){
   } catch (error) {
     console.log(error)
   }
-}let {prompt} = require("inquirer");
-const db = require("./db");
-require("console.table");
-const logo = require("asciiart-logo");
+}
+let {prompt} = require("inquirer");
+// const db = require("./db");
+// require("console.table");
+// const logo = require("asciiart-logo");
 
 
-init();
+// init();
 function init() {
-  const logoText = logo({ name: "Employee Tracker" }).render();
-  console.log(logoText);
+  // const logoText = logo({ name: "Employee Tracker" }).render();
+  // console.log(logoText);
   loadMainPrompts();
 }
 

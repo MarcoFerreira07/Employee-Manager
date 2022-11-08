@@ -7,15 +7,15 @@ insert  into employee(first_name, last_name, role_id, manager_id) values
 ('Jeff','Firrelli','3','2'),
 ('William','Patterson','4','3'),
 ('Gerard','Bondur','5','4'),
-('Anthony','Bow','6','5'),
+('Anthony','Bow','6','5'),;
 
-insert into department(id, name) values
+insert into department(name) values
 ('Administration'),
 ('RnD'),
 ('Sales'),
 ('HR'),
 ('Customer_Service'),
-('Accounting')
+('Accounting');
 
 insert into role(salary, title, department_id)
 (400.00, 'President','1'),
@@ -23,4 +23,4 @@ insert into role(salary, title, department_id)
 (300.00, 'VPofSales','3'),
 (100.00, 'HRofRep','4'),
 (50.00, 'CustomerofService_Rep','5'),
-(200.00, 'Accountant','6')
+(200.00, 'Accountant','6');
