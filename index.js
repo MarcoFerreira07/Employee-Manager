@@ -1,6 +1,5 @@
 const inquirer = require("inquirer")
 const mysql = require("mysql")
-const cTable = require('console.table');
 
 const connection = mysql.createConnection({
     host: "localhost",
@@ -9,3 +8,9 @@ const connection = mysql.createConnection({
     password: "",
     database: "employee_trackerDB"
   });
+
+  connection.connect(function(err) {
+    if (err) throw err
+    console.log("Connected as Id" + connection.threadId)
+    startPrompt();
+});
